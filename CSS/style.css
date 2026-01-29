@@ -1,0 +1,54 @@
+body
+{
+    background-color: #E7D6C9;
+}
+
+h1
+{
+    color: #7A4A2E;
+}
+
+input
+{
+    height: 30px;
+    width: 200px;
+    background-color: #F3EAE3;
+    color: #2F1E16;
+    border-color: #9C8A7A;
+}
+
+#addTask
+{
+    height: 40px;
+    width: 55px;
+    background-color: #B08968;
+    color: #F3EAE3;
+    border-color: #2F1E16;
+    border-radius: 5px;
+}
+
+#addTask:hover
+{
+    background-color: #7A4A2E;
+}
+
+.task
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    background-color: #F3EAE3;
+    color: #2F1E16;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.delete
+{
+    background-color: #E7D6C9;
+    color: #7A4A2E;
+    border-color: #2F1E16;
+    border-radius: 5px;
+}
