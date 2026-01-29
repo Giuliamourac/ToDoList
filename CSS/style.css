@@ -25,11 +25,13 @@ input
     color: #F3EAE3;
     border-color: #2F1E16;
     border-radius: 5px;
+    transition: 0.4s ease;
 }
 
 #addTask:hover
 {
     background-color: #7A4A2E;
+    transform: scale(1.05);
 }
 
 .task
@@ -38,7 +40,7 @@ input
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    background-color: #F3EAE3;
+    background-color: #D6C1B2;
     color: #2F1E16;
     width: fit-content;
     padding: 10px;
@@ -49,6 +51,14 @@ input
 {
     background-color: #E7D6C9;
     color: #7A4A2E;
-    border-color: #2F1E16;
+    border-color: #7A4A2E;
     border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.delete:hover
+{
+    background-color: #c97c5d4f;
+    color: #2F1E16;
+    transform: scale(1.09);
 }

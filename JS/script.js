@@ -1,21 +1,35 @@
 const toDoList = [];
-let button = document.querySelector("#addTask");
+let addButton = document.querySelector("#addTask");
 let tasksContainer = document.querySelector("#tasks");
 
-button.addEventListener("click", addToDo);
+addButton.addEventListener("click", addToDo);
 
 function addToDo()
 {
     const input = document.querySelector("#input");
     const taskName = input.value;
 
-    toDoList.push(taskName);
-    console.log(toDoList);
+    if(taskName === "")
+    {
+        window.alert("Enter something valid");
+    }
+    else
+    {
+        toDoList.push(taskName);
+        console.log(toDoList);
 
-    input.value = '';
+        input.value = '';
 
+        renderToDoList();
+    }
+}
+
+function delToDo(index) 
+{
+    toDoList.splice(index, 1);
     renderToDoList();
 }
+
 
 function renderToDoList()
 {
@@ -24,8 +38,7 @@ function renderToDoList()
     for(let i = 0; i < toDoList.length; i++)
     {
         const toDo = toDoList[i];
-        const html = `<p class = "task">${toDo} <button class ="delete">Delete</button></p>`;
-        toDoListHTML += html;
+        toDoListHTML += `<p class = "task">${toDo} <button class ="delete" onclick="delToDo(${i})">Delete</button></p>`;
     }
 
     tasksContainer.innerHTML = toDoListHTML
