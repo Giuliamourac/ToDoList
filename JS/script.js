@@ -8,6 +8,8 @@ function addToDo()
 {
     const input = document.querySelector("#input");
     const taskName = input.value;
+    const dateInput = document.querySelector("#date");
+    const date = dateInput.value;
 
     if(taskName === "")
     {
@@ -15,8 +17,7 @@ function addToDo()
     }
     else
     {
-        toDoList.push(taskName);
-        console.log(toDoList);
+        toDoList.push({name: taskName, dueDate: date});
 
         input.value = '';
 
@@ -38,7 +39,10 @@ function renderToDoList()
     for(let i = 0; i < toDoList.length; i++)
     {
         const toDo = toDoList[i];
-        toDoListHTML += `<p class = "task">${toDo} <button class ="delete" onclick="delToDo(${i})">Delete</button></p>`;
+        toDoListHTML += 
+        `<p class = "task">
+            ${toDo.name} ${toDo.dueDate} <button class ="delete" onclick="delToDo(${i})">Delete</button>
+        </p>`;
     }
 
     tasksContainer.innerHTML = toDoListHTML
