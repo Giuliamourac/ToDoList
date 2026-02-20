@@ -6,12 +6,13 @@ body
 h1
 {
     color: #7A4A2E;
+    font-size: 4vw;
 }
 
 input
 {
-    height: 30px;
-    width: 200px;
+    height: 40px;
+    width: 300px;
     background-color: #F3EAE3;
     color: #2F1E16;
     border-color: #9C8A7A;
@@ -25,6 +26,7 @@ input
     color: #F3EAE3;
     border-color: #2F1E16;
     border-radius: 5px;
+    height: 45px;
     transition: 0.4s ease;
 }
 
@@ -36,29 +38,47 @@ input
 
 .task
 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-    background-color: #D6C1B2;
-    color: #2F1E16;
-    width: fit-content;
-    padding: 10px;
+    background-color: #B08968;
+    color: #F3EAE3;
+    padding: 20px;
+    margin: 10px 0 10px 0;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+    max-width: 580px;
 }
 
-.delete
+.task div
+{
+    align-self: center;
+    font-size: 19px;
+}
+
+.task div:nth-of-type(2)
+{
+    grid-column-start: 3;
+}
+
+.task button
+{
+    grid-column-start: 5;
+}
+
+.task button
 {
     background-color: #E7D6C9;
     color: #7A4A2E;
     border-color: #7A4A2E;
     border-radius: 5px;
+    height: 35px;
     transition: 0.4s ease;
 }
 
-.delete:hover
+.task button:hover
 {
-    background-color: #c97c5d4f;
-    color: #2F1E16;
+    background-color: #7A4A2E;
+    color: #F3EAE3;
     transform: scale(1.09);
 }

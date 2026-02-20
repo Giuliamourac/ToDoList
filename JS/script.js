@@ -31,7 +31,6 @@ function delToDo(index)
     renderToDoList();
 }
 
-
 function renderToDoList()
 {
     let toDoListHTML = '';
@@ -40,9 +39,15 @@ function renderToDoList()
     {
         const toDo = toDoList[i];
         toDoListHTML += 
-        `<p class = "task">
-            ${toDo.name} ${toDo.dueDate} <button class ="delete" onclick="delToDo(${i})">Delete</button>
-        </p>`;
+        `<section class = "task">
+            <div>
+                ${toDo.name} 
+            </div>
+            <div>
+                ${toDo.dueDate}
+            </div> 
+            <button onclick="delToDo(${i})">Delete</button>
+        </section>`;
     }
 
     tasksContainer.innerHTML = toDoListHTML
